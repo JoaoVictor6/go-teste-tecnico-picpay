@@ -21,16 +21,6 @@ Abaixo você encontrará todos as informações necessárias para iniciar o seu 
 - Fique à vontade para perguntar qualquer dúvida aos recrutadores;
 - Fique tranquilo, respire, assim como você, também já passamos por essa etapa. Boa sorte! :)
 
-_Corpo do Email com o link do repositório do desafio_
-
-> Seu Nome
->
-> Nome do recrutador
->
-> Link do repositório
->
-> Link do Linkedin
-
 ### Sobre o ambiente da aplicação:
 
 - Escolha qualquer framework que se sinta **confortável** em trabalhar. Esse teste **não faz** nenhuma preferência,
