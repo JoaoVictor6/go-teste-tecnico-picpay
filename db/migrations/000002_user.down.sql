@@ -1,0 +1,2 @@
+DROP TYPE IF EXISTS doc_type_enum;
+DROP TABLE IF EXISTS client;
