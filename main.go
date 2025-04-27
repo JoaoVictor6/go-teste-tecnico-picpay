@@ -26,10 +26,8 @@ func main() {
 	}
 	defer conn.Close(context.Background())
 
-	http.HandleFunc("/", func (w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello")
-	})
 	http.HandleFunc("/client", withDB(conn, ClientRoute))
+	http.HandleFunc("/transfer", withDB(conn, TransferRoute))
 
 	http.ListenAndServe(":8080", nil)
 }

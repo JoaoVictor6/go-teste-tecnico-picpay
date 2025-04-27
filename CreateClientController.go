@@ -11,19 +11,6 @@ import (
 	"github.com/jackc/pgx/v5/pgconn"
 )
 
-type DocTypeEnum string
-
-const (
-	CPF DocTypeEnum = "CPF"
-	CNPJ DocTypeEnum = "CNPJ"
-)
-type Client struct {
-	Name string `json:"name"`
-	DocType DocTypeEnum `json:"doc_type"`
-	DocValue string `json:"doc_value"`
-	Password string `json:"password"`
-	Wallet int32 `json:"wallet"`
-}
 func ClientRoute(dbConn *pgx.Conn, w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 		case "POST": 
@@ -32,7 +19,7 @@ func ClientRoute(dbConn *pgx.Conn, w http.ResponseWriter, r *http.Request) {
 			err := body.Decode(client)
 			if err != nil {
 				http.Error(w, err.Error(), http.StatusBadRequest)
-				log.Fatal("Error when decode:", err.Error())
+				log.Println("Error when decode:", err.Error())
 				return
 			}
 
